@@ -30,7 +30,9 @@
     var loadingBar = document.getElementById("loadingBar");
     var width = 10;
 
-    var id = setInterval(frame2, 10);
+    var id = setInterval(frame, 10);
+    
+    //total loading
     function frame() {
       if (width == 100) {
         document.body.classList.remove("before-load");
@@ -47,7 +49,8 @@
         loadingBar.innerHTML = width + "%";
       }
     }
-
+    
+    //lazy loading (section1)
     function frame2() {
       if (width == 100) {
         document.body.classList.remove("before-load");
